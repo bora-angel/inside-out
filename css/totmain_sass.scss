@@ -1,0 +1,33 @@
+/*너비와 높이 지정*/
+@mixin FigureV($width,$height){
+    width: $width;
+    height:$height;
+}
+
+/*이벤트 시상회 전체 박스_동일코드*/
+@mixin ToteventPage {
+    background-color:#3061a8;
+    box-shadow: 8px 8px 15px #0000009c;
+    border-radius: 45px;
+    position:absolute;
+}
+
+/*input이벤트 입력창 버튼_동일코드*/
+@mixin ToteventBtn{
+    background-color: #3a77d8;
+    border:2px solid #cfe5ff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #234783;
+}
+
+/*position을 통한 너비와 높이 지정*/
+@mixin positionWH($Left,$top) {
+    left:$Left;
+    top:$top;
+}
+
+/*margin을 통한 너비와 높이 지정*/
+@mixin marginWH($mLeft,$mTop) {
+    margin-left: $mLeft;
+    margin-top:$mTop;
+}

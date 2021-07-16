@@ -1,0 +1,397 @@
+/*너비와 높이 지정*/
+@mixin FigureV($width,$height){
+    width: $width;
+    height:$height;
+}
+
+/*이벤트 시상회 전체 박스_동일코드*/
+@mixin ToteventPage {
+    background-color:#3061a8;
+    box-shadow: 8px 8px 15px #0000009c;
+    border-radius: 45px;
+    margin:0 auto;
+}
+
+/*input이벤트 입력창 버튼_동일코드*/
+@mixin ToteventBtn{
+    background-color: #3a77d8;
+    border:2px solid #cfe5ff;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px #234783;
+}
+
+/*position을 통한 너비와 높이 지정*/
+@mixin positionWH($Left,$top) {
+    left:$Left;
+    top:$top;
+}
+
+/*margin을 통한 너비와 높이 지정*/
+@mixin marginWH($mLeft,$mTop) {
+    margin-left: $mLeft;
+    margin-top:$mTop;
+}
+
+/*------------------------------------------------------------*/
+/*이미지 조정*/
+.eventBackground img{
+    position: relative;
+    
+}
+/*박스 위치 변동*/
+.eventTopBox{
+    position: absolute;
+    z-index: 1000;
+    width:100%;
+    top:53vw;
+
+}
+/*이벤트페이지 영역*/
+.eventBackground{
+    @include FigureV(100%,100%);//너비,높이
+    position: relative;
+}
+/*이벤트페이지 이미지*/
+.eventImg{
+    @include FigureV(100%,auto);//너비,높이
+}
+/*모바일 이벤트페이지 이미지*/
+.eventMobileImg{
+    @include FigureV(100%,auto);//너비,높이
+    display: none;
+}
+
+/*이벤트 시사회 전체박스*/
+.eventInputBox{
+    width:60%;
+    @include ToteventPage;//동일코드_이벤트 시사회 전체박스
+}
+/*input 높이*/
+.userInput{
+    height:50px;
+}
+
+/*입력 양식의 디자인*/
+input::placeholder {
+    color: #c1c1c1;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+ /*제목*/
+ .eventTitle{
+    color:white;
+    font-weight: bold;
+}
+/*강조 부분_제목*/
+.eventBlod{
+    color:#f8b600;
+    font-family: 'Intensa Fuente Regular';
+    font-size: 3rem;
+}
+/*서브내용*/
+.mainContent{
+    color:white;
+    font-size: 1.52vw;
+}
+
+/*개인동의 말*/
+.userTxt{
+    color:white;
+    font-size: 0.9rem;
+}
+/*버튼*/
+.submitBtn{
+    @include FigureV(100px,50px);//너비,높이
+    @include ToteventBtn; //동일코드_이벤트 버튼
+}
+
+ /*이벤트 안내내용*/
+ .eventTxt{
+    color:#aad4f1;
+    font-size: 0.8rem;
+}
+
+.titleBlock{
+    display:none;
+}
+
+@media (min-width:461px) and (max-width: 576px) {
+
+    /*이벤트페이지 이미지*/
+.eventImg{
+@include FigureV(100%,auto);//너비,높이
+display: none;
+}
+/*모바일 이벤트페이지 이미지*/
+.eventMobileImg{
+@include FigureV(100%,auto);//너비,높이
+display: block;
+}
+
+
+/*이벤트 시사회 전체박스*/
+.eventInputBox{
+width:90%;
+@include ToteventPage;//동일코드_이벤트 시사회 전체박스
+@include positionWH(50%,2200px);//position으로 통한 너비와 높이 지정
+
+}
+
+
+/*input 높이*/
+.userInput{
+height:30px;
+}
+
+/*입력 양식의 디자인*/
+input::placeholder {
+color: #c1c1c1;
+font-size: 10px;
+font-weight: 500;
+}
+
+/*제목*/
+.eventTitle{
+color:white;
+font-weight: bold;
+font-size: 20px;
+}
+/*강조 부분_제목*/
+.eventBlod{
+color:#f8b600;
+font-family: 'Intensa Fuente Regular';
+font-size: 21px;
+}
+/*서브내용*/
+.mainContent{
+color:white;
+font-size: 16px;
+}
+
+/*개인동의 말*/
+.userTxt{
+color:white;
+font-size: 10px;
+margin-left: 5%;
+}
+/*버튼*/
+.submitBtn{
+@include FigureV(80px,30px);//너비,높이
+@include ToteventBtn; //동일코드_이벤트 버튼
+line-height:15px;
+font-size: 10px;
+float:right;
+
+}
+.checkInput {
+margin-left:0.8%;
+}
+.eventTxt{
+font-size:10px;
+}
+
+.addTag{
+padding:0px;
+p{
+margin:0px;
+margin-bottom: 10px;
+}
+}
+.checkLable{
+margin:0px;
+margin-bottom: 5px;
+}
+.eventTopBox{
+position: absolute;
+z-index: 1000;
+width:100%;
+top:56.1vw;
+}
+}
+@media (min-width:401px) and (max-width: 460px) {
+
+    /*이벤트페이지 이미지*/
+.eventImg{
+@include FigureV(100%,auto);//너비,높이
+display: none;
+}
+/*모바일 이벤트페이지 이미지*/
+.eventMobileImg{
+@include FigureV(100%,auto);//너비,높이
+display: block;
+}
+
+
+/*이벤트 시사회 전체박스*/
+.eventInputBox{
+width:90%;
+@include ToteventPage;//동일코드_이벤트 시사회 전체박스
+@include positionWH(50%,2200px);//position으로 통한 너비와 높이 지정
+
+}
+
+
+/*input 높이*/
+.userInput{
+height:30px;
+}
+
+/*입력 양식의 디자인*/
+input::placeholder {
+color: #c1c1c1;
+font-size: 10px;
+font-weight: 500;
+}
+
+/*제목*/
+.eventTitle{
+color:white;
+font-weight: bold;
+font-size: 20px;
+}
+/*강조 부분_제목*/
+.eventBlod{
+color:#f8b600;
+font-family: 'Intensa Fuente Regular';
+font-size: 21px;
+}
+/*서브내용*/
+.mainContent{
+color:white;
+font-size: 16px;
+}
+
+/*개인동의 말*/
+.userTxt{
+color:white;
+font-size: 10px;
+margin-left: 5%;
+}
+/*버튼*/
+.submitBtn{
+@include FigureV(80px,30px);//너비,높이
+@include ToteventBtn; //동일코드_이벤트 버튼
+line-height:15px;
+font-size: 10px;
+float:right;
+
+}
+.checkInput {
+margin-left:0.8%;
+}
+.eventTxt{
+font-size:10px;
+}
+
+.addTag{
+padding:0px;
+p{
+margin:0px;
+margin-bottom: 10px;
+}
+}
+.checkLable{
+margin:0px;
+margin-bottom: 5px;
+}
+.eventTopBox{
+position: absolute;
+z-index: 1000;
+width:100%;
+top:57.1vw;
+}
+}
+@media (min-width:375px) and (max-width: 400px) {
+
+            /*이벤트페이지 이미지*/
+.eventImg{
+    @include FigureV(100%,auto);//너비,높이
+    display: none;
+}
+/*모바일 이벤트페이지 이미지*/
+.eventMobileImg{
+    @include FigureV(100%,auto);//너비,높이
+    display: block;
+}
+
+
+    /*이벤트 시사회 전체박스*/
+.eventInputBox{
+    width:90%;
+    @include ToteventPage;//동일코드_이벤트 시사회 전체박스
+    @include positionWH(50%,2200px);//position으로 통한 너비와 높이 지정
+   
+}
+
+
+        /*input 높이*/
+.userInput{
+    height:30px;
+}
+
+/*입력 양식의 디자인*/
+input::placeholder {
+    color: #c1c1c1;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+ /*제목*/
+ .eventTitle{
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+/*강조 부분_제목*/
+.eventBlod{
+    color:#f8b600;
+    font-family: 'Intensa Fuente Regular';
+    font-size: 21px;
+}
+/*서브내용*/
+.mainContent{
+    color:white;
+    font-size: 16px;
+}
+
+/*개인동의 말*/
+.userTxt{
+    color:white;
+    font-size: 10px;
+    margin-left: 5%;
+}
+/*버튼*/
+.submitBtn{
+    @include FigureV(80px,30px);//너비,높이
+    @include ToteventBtn; //동일코드_이벤트 버튼
+    line-height:15px;
+    font-size: 10px;
+    float:right;
+
+}
+.checkInput {
+    margin-left:0.8%;
+}
+.eventTxt{
+    font-size:10px;
+}
+
+.addTag{
+    padding:0px;
+    p{
+        margin:0px;
+        margin-bottom: 10px;
+    }
+}
+.checkLable{
+    margin:0px;
+    margin-bottom: 5px;
+}
+.eventTopBox{
+    position: absolute;
+    z-index: 1000;
+    width:100%;
+    top:51.8vw;
+}
+}

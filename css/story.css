@@ -1,0 +1,106 @@
+@charset "UTF-8";
+/*story영역*/
+.storySection {
+  width: 100%;
+  height: 1000px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/background6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  position: relative; }
+  .storySection .storyTextBox {
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    top: 28%;
+    left: 9%; }
+    .storySection .storyTextBox h1 {
+      font-family: 'Intensa Fuente Regular';
+      color: #fde37b;
+      font-size: 45px; }
+    .storySection .storyTextBox .textBox {
+      display: none; }
+    .storySection .storyTextBox .typing {
+      margin-top: 30px; }
+    .storySection .storyTextBox .typing ul li {
+      display: block;
+      color: white;
+      font-size: 22px;
+      line-height: 40px; }
+    .storySection .storyTextBox .typing ul li.on {
+      display: inline-block;
+      animation-name: cursor;
+      animation-duration: 0.3s;
+      animation-iteration-count: infinite; }
+@keyframes cursor {
+  0% {
+    border-right: 1px solid #fff; }
+  50% {
+    border-right: 1px solid #000; }
+  100% {
+    border-right: 1px solid #fff; } }
+  .storySection .storyTextBoxMobile, .storySection .storyTextBoxMobile h1, .storySection .storyTextBoxMobile pre {
+    display: none; }
+
+@media only screen and (min-width: 425px) and (max-width: 576px) {
+  /*모바일 story 영역*/
+  .storySection {
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/background6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative; }
+    .storySection .storyTextBoxMobile {
+      width: 90%;
+      height: 80%;
+      position: absolute;
+      top: 14%;
+      left: 5%;
+      display: block; }
+      .storySection .storyTextBoxMobile h1 {
+        font-family: 'Intensa Fuente Regular';
+        color: #fde37b;
+        font-size: 30px;
+        display: block; }
+      .storySection .storyTextBoxMobile pre {
+        font-family: 'NanumSquare';
+        color: #fcfbfa;
+        font-size: 13px;
+        line-height: 25px;
+        display: block; }
+    .storySection .storyTextBox, .storySection .storyTextBox h1, .storySection .storyTextBox pre {
+      display: none; } }
+@media only screen and (max-width: 425px) {
+  .storySection {
+    width: 100%;
+    height: 500px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../image/background6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative; }
+    .storySection .storyTextBoxMobile {
+      width: 93%;
+      height: 80%;
+      position: absolute;
+      top: 14%;
+      left: 3%;
+      display: block; }
+      .storySection .storyTextBoxMobile h1 {
+        font-family: 'Intensa Fuente Regular';
+        color: #fde37b;
+        font-size: 30px;
+        display: block; }
+      .storySection .storyTextBoxMobile pre {
+        font-family: 'NanumSquare';
+        color: #fcfbfa;
+        font-size: 12px;
+        line-height: 25px;
+        display: block;
+        overflow: hidden; }
+    .storySection .storyTextBox, .storySection .storyTextBox h1, .storySection .storyTextBox pre {
+      display: none; } }
+
+/*# sourceMappingURL=story.css.map */

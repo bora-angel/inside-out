@@ -1,0 +1,431 @@
+/*나눔스퀘어 폰트지정*/
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+/*tvN 즐거운이야기 Bold*/
+@font-face { font-family: 'OTEnjoystoriesBA'; 
+src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/OTEnjoystoriesBA.woff') format('woff'); font-weight: bold; font-style: normal; }
+
+
+
+*{margin:0px; padding:0px;}
+html,body{
+  background-color: #222222;
+}
+//뉴스전체적인 박스
+.newsArea {
+  width: 100%;
+  height: 1000px;
+  background-color: #141d51;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*뉴스를 감싸는 흰 투명 박스*/
+.newpageBox{
+width:90%;
+height:750px;
+background-color:#a4a8c5c7;
+left:50%; top:10%;
+margin-left: -45%;
+z-index: 10;
+}
+
+
+/*뉴스 본문 전체 박스*/
+.newMainBox{
+width:97.5%;
+height:1350px;
+margin:0 auto;
+background-color: rgb(255, 255, 255);
+border-radius: 5px 5px 0 0;
+display: none;
+}
+
+/*뉴스 본문 사진박스*/
+.cardWidth{
+width:70%;
+margin:0 auto;
+border:none;
+font-size: 20px;
+}
+
+/*뉴스 본문 제목*/
+.newMainTitle{
+font-size: 40px;
+font-weight: bold;
+}
+
+/*뉴스 본문 내용*/
+.newsContent{
+font-size: 20px;
+font-weight: 600;
+letter-spacing: 1px;
+line-height: 38px;
+}
+
+//------------------------------------
+/*뉴스 목록을 감싸는 부모박스*/
+  /*뉴스 목록박스*/
+  .cardListBox{
+    cursor: pointer;
+  }
+
+//호버 전에 모습
+.ListContentA{
+  background-color: #ad88ba;
+  color:black;
+  height:567px;
+}
+  //목록 내용
+  .ListContentAtxt{
+    display: none;
+  }
+
+//----------------------------
+.ListContentB{
+  background-color: #464d84;
+  color:white;
+  height:567px;
+}
+//목록 내용
+.ListContentBtxt{
+  display: none;
+}
+
+//----------------------------
+.ListContentC{
+  background-color: #35353d;
+  color:white;
+  height:567px;
+}
+//목록 내용
+.ListContentCtxt{
+  display: none;
+}
+//----------------------------
+
+//호버 후에 모습
+.ListContentA:hover{
+  background-color: white;
+    transition-duration:1s;
+  .ListContentAtxt{
+    display: block;
+  }
+}
+
+.ListContentA:hover{
+  background-color: white;
+    transition-duration:1s;
+  .ListContentAtxt{
+    display: block;
+  }
+}
+//----------------------------
+.ListContentB:hover{
+  background-color: white;
+    transition-duration:1s;
+    color:black;
+
+  .ListContentBtxt{
+    display: block;
+  }
+}
+
+//----------------------------
+.ListContentC:hover{
+  background-color: white;
+    transition-duration:1s;
+    color:black;
+
+  .ListContentCtxt{
+    display: block;
+  }
+}
+
+//----------------------------
+
+/*뉴스 목록들 감싸는 박스*/
+.newList{
+cursor: pointer;
+width:100%;
+}
+/*뉴스 목록들 제목*/
+.ListcardTitle{
+font-family: 'OTEnjoystoriesBA'; 
+}
+
+
+/*PC용 이전,다음버튼*/
+.pageItem{
+  width:300px;
+  font-size: 4rem;
+  height:567px;
+  color:white;
+  position: absolute;
+
+}
+
+/*PC버전 버튼 위치*/
+//왼쪽버튼
+.leftBtn{
+  left:120px;
+}
+//오른쪽버튼
+.rightBtn{
+  right:120px;
+}
+
+//모바일 전용 이전,다음버튼
+.pageItemB{
+  display: none;
+}
+
+///PC용 이전,다음버튼,모바일 전용 이전,다음버튼을 호버 했을때
+.pageItem:hover, .pageItemB:hover{
+  color:#29c3ff;
+}
+
+
+  /*모바일용 버튼*/
+  .pageItemB{
+    color:white;
+  }
+
+
+   /*배경장식*/ 
+   .newDesignImgA,.newDesignImgB{
+    width:100%;
+    height:100%;
+  }
+
+      /*높이 가로배경*/
+      .newDesignImgA{
+        display:none;
+      }
+  @media (max-width: 1550px) { 
+    /*쪽수 아이콘*/
+.pageItem{
+  width:300px;
+  font-size: 4rem;
+  height:567px;
+  color:white;
+  position: absolute;
+}
+
+/*버튼 위치*/
+.leftBtn{
+  left:30px;
+}
+.rightBtn{
+  right:30px;
+}
+
+  /*뉴스 목록 박스 위치
+  .PCBtn{
+    
+  }
+
+      /*뉴스 두번째 목록 (제목,내용)감싸는  박스*/
+  .cardListBody{
+    height:350px;
+  }
+
+  /*뉴스를 감싸는 흰 투명 박스*/
+  .newpageBox {
+    margin-bottom:20%;
+  }
+
+
+  }
+  @media (max-width: 576px) and (min-width: 375px) { 
+    #newListOwn,#newListThree{
+      display: none;
+    }
+
+    /*pc용 이전다음 버튼 지우기*/
+    .pageItemA{
+      display: none;
+    }
+
+    //모바일용 이전다음 버튼 생기기
+    .pageItemB{
+      display: block;
+    }
+
+
+  //-----------------------------------------------------
+    /*뉴스를 감싸는 흰 투명 박스*/
+    .newpageBox{
+      width:100%;
+      height:800px;
+      background-color:#a4a8c5c7;
+      left:0; top:5%;
+      margin-left: 0;
+      margin-top:-350px;
+      z-index: 10;
+      }
+
+      //카드의 높이
+      .smailCard {
+        margin-top:10%;
+      }
+  /*뉴스 메인 박스*/
+  .newMainBox{
+  width:97.5%;
+  height:1800px;
+  margin:0 auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px 5px 0 0;
+  display: none;
+  
+  }
+  /*뉴스 카드박스*/
+  .cardWidth{
+  width:70%;
+  margin:0 auto;
+  border:none;
+  font-size: 10px;
+  }
+  /*메인 제목*/
+  .newMainTitle{
+  font-size: 28px;
+  font-weight: bold;
+  }
+  
+  /*뉴스 메인 내용*/
+  .newsContent,#newsMainContent{
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  line-height: 29px;
+  }
+  
+  //------------------------------------
+  /*뉴스 목록을 감싸는 부모박스*/
+    /*뉴스 목록박스*/
+    .cardListBox{
+      cursor: pointer;
+    }
+  
+  //호버 전에 모습
+  .ListContentA{
+    background-color: #ad88ba;
+    color:black;
+    height:567px;
+  }
+    //목록 내용
+    .ListContentAtxt{
+      display: none;
+    }
+  
+  //----------------------------
+  .ListContentB{
+    background-color: #464d84;
+    color:white;
+    height:567px;
+  }
+  //목록 내용
+  .ListContentBtxt{
+    display: none;
+  }
+  
+  //----------------------------
+  .ListContentC{
+    background-color: #35353d;
+    color:white;
+    height:567px;
+  }
+  //목록 내용
+  .ListContentCtxt{
+    display: none;
+  }
+  //----------------------------
+  
+  //호버 후에 모습
+  .ListContentA:hover{
+    background-color: white;
+      transition-duration:1s;
+    .ListContentAtxt{
+      display: block;
+    }
+  }
+  
+  .ListContentA:hover{
+    background-color: white;
+      transition-duration:1s;
+    .ListContentAtxt{
+      display: block;
+    }
+  }
+  //----------------------------
+  .ListContentB:hover{
+    background-color: white;
+      transition-duration:1s;
+      color:black;
+  
+    .ListContentBtxt{
+      display: block;
+    }
+  }
+  
+  //----------------------------
+  .ListContentC:hover{
+    background-color: white;
+      transition-duration:1s;
+      color:black;
+  
+    .ListContentCtxt{
+      display: block;
+    }
+  }
+  
+  //----------------------------
+  
+  /*뉴스 목록들 감싸는 박스*/
+  .newList{
+  cursor: pointer;
+  width:100%;
+  }
+  /*뉴스 목록 제목*/
+  .ListcardTitle{
+  font-family: 'OTEnjoystoriesBA'; 
+  }
+  
+  /*쪽수매기기*/
+  .pageIndex{
+  margin-top:10%;
+  margin-bottom:5%;
+  }
+  
+/*모바일용 버튼 감싸는 부모*/
+.moblieItem{
+  width:100%;
+}
+  /*모바일용 버튼*/
+  .pageItemB{
+    display: inline-block;
+    font-size: 3.5rem;
+  }
+
+    /*오른쪽 목록 버튼*/
+    .ItemBright{
+      float:right;
+      color:rgb(255, 255, 255);
+    }
+
+    /*배경장식*/
+    .newDesignImgA,.newDesignImgB{
+      width:100%;
+      height:100%;
+    }
+
+    /*뉴스목록 박스의 내용*/
+  .cardListBody{
+    height:350px;
+  }
+
+  /*뉴스를 감싸는 흰 투명 박스*/
+  .newpageBox {
+    margin-bottom:20%;
+  }
+
+  }

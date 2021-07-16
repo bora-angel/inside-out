@@ -1,0 +1,160 @@
+*{margin:0; padding:0;}
+.buttonArea {
+    width: 100px;
+    height: auto;
+    position: fixed;
+    bottom: 20%;
+    right: 1.25%;
+    z-index: 1000;
+    .topButtonBox {
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        margin: 0 0 30px 15px;
+        color: #fcfbfa;
+        background: rgb(0, 1, 58);
+        border-radius: 50%;
+        .topButton {
+            color: #fcfbfa;
+            margin: -5px 0 0 20px;
+        }
+        p {
+            color: #fcfbfa;
+            font-size: 25px;
+            text-align: center;
+            font-weight: 600;
+            margin: -15px 0 0 0;
+        }
+    }
+    .ticketBox {
+        width: 90px;
+        height: auto;
+        cursor: pointer;
+        .ticketText {
+            background: #333;
+            color: #fcfbfa;
+            width: 90px;
+            margin: 0 0 5px 5px;
+            text-align: center;
+            border-radius: 10px;
+        }
+        .ticketImg {
+            width: 90px;
+            height: auto;
+            margin-left: 5px;
+        }
+    }
+    /*포트폴리오 알림 영역*/
+    .modal {
+        display: none;
+        z-index: 5000;
+    }
+    .modal-body {
+        font-size: 20px;
+    }
+    .btn-secondary {
+        background-color: #007BFF;
+    }
+}
+    @media only screen and (min-width: 375px) and (max-width: 576px) {
+        .buttonArea {
+            width: 70px;
+            height: auto;
+            position: fixed;
+            bottom: 20%;
+            right: 1.25%;
+            z-index: 1000;
+            .topButtonBox {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                margin: 0 0 30px 15px;
+                color: #fcfbfa;
+                background: rgb(0, 1, 58);
+                border-radius: 50%;
+                .topButton {
+                    color: #fcfbfa;
+                    margin: -5px 0 0 15px;
+                    font-size: 20px;
+                }
+                p {
+                    color: #fcfbfa;
+                    font-size: 13px;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: -5px 0 0 0;
+                }
+            }
+            .ticketBox {
+                width: 40px;
+                height: auto;
+                cursor: pointer;
+                .ticketText {
+                    background: #333;
+                    color: #fcfbfa;
+                    width: 40px;
+                    margin: -10px 0 5px 15px;
+                    text-align: center;
+                    font-size: 10px;
+                    border-radius: 10px;
+                }
+                .ticketImg {
+                    width: 40px;
+                    height: auto;
+                    margin: 0 0 0 15px;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 375px){
+        .buttonArea {
+            width: 70px;
+            height: auto;
+            position: fixed;
+            bottom: 20%;
+            right: 1.25%;
+            z-index: 1000;
+            .topButtonBox {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                margin: 0 0 30px 15px;
+                color: #fcfbfa;
+                background: rgb(0, 1, 58);
+                border-radius: 50%;
+                .topButton {
+                    color: #fcfbfa;
+                    margin: -5px 0 0 15px;
+                    font-size: 20px;
+                }
+                p {
+                    color: #fcfbfa;
+                    font-size: 13px;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: -5px 0 0 0;
+                }
+            }
+             .ticketBox {
+                width: 40px;
+                height: auto;
+                cursor: pointer;
+                .ticketText {
+                    background: #333;
+                    color: #fcfbfa;
+                    width: 40px;
+                    margin: -10px 0 5px 15px;
+                    text-align: center;
+                    font-size: 10px;
+                    border-radius: 10px;
+                }
+                .ticketImg {
+                    width: 40px;
+                    height: auto;
+                    cursor: pointer;
+                    margin: 0 0 0 15px;
+                }
+            }
+        }
+    }
+    

@@ -1,0 +1,909 @@
+@font-face {
+    font-family: 'Intensa Fuente Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Intensa Fuente Regular'), url('../font/Intensa Fuente.woff') format('woff');
+}
+
+/*
+* {
+    margin: 0px;
+    padding: 0px;
+}
+*/
+
+.reviewArea {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-image: url("../image/mobileback.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    
+}
+
+/*.bgCSS {
+        position: fixed; 
+        top: 0; 
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        position: relative;
+        margin-top: 1400px;
+      
+}*/
+
+/*메인박스 영역 잡기*/
+.mainBox {
+    width: 1200px;
+    height: 800px;
+    background-color: white;
+    position: relative;
+    left: 50%;
+    margin-left: -600px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*상단 타이틀 영역*/
+.titleBox {
+    width: 1200px;
+    height: 80px;
+    background-color: #1D387C;
+
+    .bubOne {
+        width: 13%;
+        height: auto;
+        position: relative;
+        float: left;
+    }
+
+    .titleText {
+        width: 75%;
+        font-family: 'Intensa Fuente Regular';
+        color: #CFE4FF;
+        text-align: center;
+        line-height: 80px;
+        font-size: 60px;
+        position: relative;
+        float: left;
+    }
+
+    .bubTwo {
+        width: 12%;
+        height: auto;
+        position: relative;
+        float: left;
+    }
+}
+
+/*왼쪽 영역, 평균평점과 포스터 이미지*/
+.leftBox {
+    position: relative;
+    float: left;
+    width: 500px;
+    height: 700px;
+    z-index: 100;
+
+    .posterBox {
+        width: 300px;
+        height: 600px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -150px;
+        margin-top: -300px;
+
+        .leftStar a {
+            color: #ffce3b;
+        }
+    }
+
+    p {
+        color: #1D387D;
+        display: inline-block;
+        font-size: 20px;
+        font-weight: bold;
+        padding-bottom: 10px;
+    }
+
+    /*.starImg {
+        width: 30px;
+        height: auto;
+        display: inline-block;
+    }*/
+
+    .posterImg {
+        display: block;
+        width: 300px;
+        height: auto;
+        position: relative;
+    }
+}
+
+/*오른쪽 영역 input박스와 댓글창*/
+.rightBox {
+    position: relative;
+    float: left;
+    width: 700px;
+    height: 700px;
+    z-index: 100;
+
+    .talkCount {
+        margin-top: 30px;
+
+        p {
+            color: #1D387D;
+            font-size: 22px;
+            font-weight: bold;
+        }
+    }
+
+    .inputBox {
+        width: 600px;
+        height: 200px;
+        position: relative;
+
+
+        .nameBox {
+            width: 100px;
+            height: 30px;
+            position: relative;
+            float: left;
+            padding: 3px 3px 3px 3px;
+            font-family: 'NanumSquare', sans-serif !important;
+            margin-top: 20px;
+        }
+
+        /*별점 색 넣기*/
+        .starGrade {
+            margin-left: 10px;
+            position: relative;
+            float: left;
+            padding-top: 5px;
+            margin-top: 15px;
+        }
+
+        .starGrade a {
+            color: gray;
+            font-size: 22px;
+        }
+
+        .starGrade a.on {
+            color: #ffce3b;
+        }
+
+        .submitBox {
+            width: 60px;
+            height: 30px;
+            position: relative;
+            border-radius: 3px;
+            line-height: 30px;
+            border: none;
+            margin-left: 280px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    }
+
+    .textArea {
+        width: 600px;
+        height: 100px;
+        font-family: 'NanumSquare', sans-serif !important;
+        padding: 5px 10px 5px 10px;
+        font-size: 18px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        resize: none;
+    }
+
+    .cleanBot {
+        width: 600px;
+        height: 50px;
+        background-color: #dbdbdb;
+        border-radius: 10px;
+
+        .botImg {
+            width: 30px;
+            height: auto;
+            margin-top: 10px;
+            margin-left: 10px;
+            position: relative;
+            float: left;
+
+        }
+
+        .botText {
+            line-height: 50px;
+            position: relative;
+            float: left;
+            text-align: 50px;
+            margin-left: 10px;
+            color: rgb(129, 129, 129);
+        }
+
+        .botSet {
+            position: relative;
+            float: right;
+            margin-top: 15px;
+            margin-right: 10px;
+            color: rgb(129, 129, 129);
+            cursor: pointer;
+        }
+    }
+}
+
+.modal {
+    display: none;
+    z-index: 1000000;
+}
+
+.modal-body {
+    font-size: 20px;
+}
+
+.btn-secondary {
+    background-color: #007BFF;
+}
+
+/*댓글창 영역*/
+.chatWin {
+    width: 600px;
+    height: 300px;
+    overflow: auto;
+
+    li {
+        width: 380px;
+        height: 80px;
+        background-color: #F0F1F5;
+        margin-top: 15px;
+        border-radius: 10px;
+        list-style: none;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+    }
+
+    h5 {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    p {
+        padding-left: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+
+/*********************모바일 화면 576px*********************/
+@media (max-width: 576px) {
+
+
+    .reviewArea {
+        width: auto;
+        height: 150%;
+        position: absolute;
+        background-image: url("../image/mobileback.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #222222;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .mainBox {
+        /*width: 500px;*/
+        width: 90%;
+        height: 1300px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        margin-top: 40px;
+        margin-left: -45%;
+    }
+
+    .titleBox {
+        /*width: 500px;*/
+        width: 100%;
+        height: 50px;
+        background-color: #1D387C;
+
+        .bubOne {
+            width: 20%;
+            height: auto;
+            position: relative;
+            float: left;
+        }
+
+        .titleText {
+            width: 61%;
+            font-family: 'Intensa Fuente Regular';
+            color: #CFE4FF;
+            text-align: center;
+            line-height: 50px;
+            font-size: 35px;
+            position: relative;
+            float: left;
+        }
+
+        .bubTwo {
+            width: 19%;
+            height: auto;
+            position: relative;
+            float: left;
+        }
+    }
+
+    .leftBox {
+        position: relative;
+        float: left;
+        /*width: 500px;*/
+        width: 500px;
+        height: 500px;
+        z-index: 100;
+
+        .posterBox {
+            width: 350px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -175px;
+            margin-top: -200px;
+
+            .posterText {
+                color: #1D387D;
+                display: inline-block;
+                font-size: 20px;
+                font-weight: bold;
+                padding-bottom: 10px;
+                margin-left: 30px;
+            }
+
+            .posterImg {
+                margin-left: 18px;
+                display: block;
+                width: 200px;
+                height: auto;
+                position: relative;
+                margin-left: 80px;
+            }
+
+            .leftStar a {
+                color: #ffce3b;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .rightBox {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 500px;
+        z-index: 100;
+
+        .talkCount {
+            margin-left: 20px;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .inputBox {
+            /*width: 500px;*/
+            width: 100%;
+            height: 200px;
+            position: relative;
+            margin-left: 20px;
+
+            .nameBox {
+                /*width: 100px;*/
+                width: 20%;
+                height: 30px;
+                position: relative;
+                float: left;
+                padding: 3px 3px 3px 3px;
+                /*margin-top: 30px;*/
+            }
+
+            .starGrade {
+                /*width: 150px;*/
+                width: 30%;
+                margin-left: 10px;
+                position: relative;
+                float: left;
+                padding-top: 5px;
+                /*margin-top: 30px;*/
+            }
+
+            .starGrade a {
+                color: gray;
+                font-size: 15px;
+            }
+
+            .starGrade a.on {
+                color: #ffce3b;
+            }
+
+            .submitBox {
+                /*width: 60px;*/
+                width: 15%;
+                height: 30px;
+                position: relative;
+                border-radius: 3px;
+                line-height: 30px;
+                border: none;
+                margin-top: 20px;
+                margin-left: 0px;
+                margin-left: 100px;
+
+            }
+        }
+
+        .textArea {
+            /*width: 470px;*/
+            width: 85%;
+            height: 100px;
+            padding: 5px 10px 5px 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        .cleanBot {
+            /*width: 470px;*/
+            width: 90%;
+            height: 50px;
+            background-color: #dbdbdb;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+
+        .chatWin {
+            /*width: 450px;*/
+            width: 80%;
+            height: 300px;
+            overflow: auto;
+            margin-left: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+}
+
+/*********************모바일 화면 500px*********************/
+@media (max-width: 500px) {
+    .reviewArea {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        background-image: url("../image/mobileback.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #222222;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .mainBox {
+        /*width: 500px;*/
+        width: 90%;
+        height: 1300px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        margin-top: 40px;
+        margin-left: -45%;
+    }
+
+    .leftBox {
+        position: relative;
+        float: left;
+        /*width: 500px;*/
+        width: 100%;
+        height: 500px;
+        z-index: 100;
+    }
+
+    .rightBox {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 700px;
+        z-index: 100;
+    }
+
+    .inputBox {
+        width: 100%;
+        height: 200px;
+        position: relative;
+        margin-left: 20px;
+
+        .nameBox {
+            width: 20%;
+            height: 30px;
+            position: relative;
+            float: left;
+            padding: 3px 3px 3px 3px;
+            /*margin-top: 30px;*/
+        }
+
+        .starGrade {
+            width: 45%;
+            position: relative;
+            float: left;
+            padding-top: 5px;
+            /*margin-top: 30px;*/
+        }
+
+        .starGrade a {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .starGrade a.on {
+            color: #ffce3b;
+        }
+
+        .submitBox {
+            width: 7%;
+            height: 30px;
+            position: relative;
+            border-radius: 3px;
+            line-height: 30px;
+            border: none;
+            margin-left: 0px;
+        }
+    }
+
+    .textArea {
+        width: 400px;
+        height: 100px;
+        padding: 5px 10px 5px 10px;
+        font-size: 15px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    .cleanBot {
+        width: 400px;
+        height: 50px;
+        background-color: #dbdbdb;
+        border-radius: 10px;
+        margin-left: 20px;
+        font-size: 12px;
+        margin-top: 0px;
+    }
+}
+
+/**********************************************************/
+
+/*********************모바일 화면 376px-434px*********************/
+@media all and (min-width: 376px) and (max-width: 434px) {
+    .inputBox {
+        width: 50%;
+        height: 200px;
+        position: relative;
+        margin-left: 20px;
+
+        .nameBox {
+            width: 20%;
+            height: 30px;
+            position: relative;
+            float: left;
+            padding: 3px 3px 3px 3px;
+            /*margin-top: 30px;*/
+        }
+
+        .starGrade {
+            width: 40%;
+            position: relative;
+            float: left;
+            padding-top: 5px;
+            /*margin-top: 30px;*/
+        }
+
+        .starGrade a {
+            color: gray;
+            font-size: 15px;
+        }
+
+        .starGrade a.on {
+            color: #ffce3b;
+        }
+
+        .submitBox {
+            width: 10px;
+            height: 30px;
+            position: relative;
+            border-radius: 3px;
+            border: none;
+            margin-left: 0px;
+        }
+    }
+
+    /*댓글창 영역*/
+    .chatWin {
+        width: 300px;
+        height: 300px;
+        overflow: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+        padding-bottom: 20px;
+
+        li {
+            width: 280px;
+            height: 70px;
+            background-color: #F0F1F5;
+            margin-top: 15px;
+            border-radius: 10px;
+            list-style: none;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+
+        h5 {
+            padding: 10px;
+            font-size: 10px;
+        }
+
+        p {
+            font-size: 12px;
+            color: #222222;
+            padding-left: 10px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+/*********************모바일 화면 375px*********************/
+@media (max-width: 375px) {
+
+    .reviewArea {
+        width: auto;
+        height: 100%;
+        position: absolute;
+        background-image: url("../image/mobileback.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+        background-color: #222222;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .mainBox {
+        /*width: 500px;*/
+        width: 90%;
+        height: 1200px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        margin-top: 40px;
+        margin-left: -45%;
+    }
+
+    .titleBox {
+        /*width: 500px;*/
+        width: 100%;
+        height: 50px;
+        background-color: #1D387C;
+
+        .bubOne {
+            width: 30%;
+            height: auto;
+            position: relative;
+            float: left;
+        }
+
+        .titleText {
+            width: 40%;
+            font-family: 'Intensa Fuente Regular';
+            color: #CFE4FF;
+            text-align: center;
+            line-height: 50px;
+            font-size: 25px;
+            position: relative;
+            float: left;
+        }
+
+        .bubTwo {
+            width: 30%;
+            height: auto;
+            position: relative;
+            float: left;
+        }
+    }
+
+    .leftBox {
+        position: relative;
+        float: left;
+        /*width: 500px;*/
+        width: 100%;
+        height: 400px;
+        margin-top: 20px;
+        z-index: 100;
+
+        .posterBox {
+            margin: 0px;
+            padding: 0px;
+            width: 280px;
+            height: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -140px;
+            margin-top: -200px;
+
+            .posterText {
+                color: #1D387D;
+                display: inline-block;
+                font-size: 16px;
+                font-weight: bold;
+                padding-bottom: 10px;
+            }
+
+            .posterImg {
+                margin-left: 40px;
+                display: block;
+                width: 200px;
+                height: auto;
+                position: relative;
+            }
+
+            .leftStar a {
+                color: #ffce3b;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .rightBox {
+        position: relative;
+        float: left;
+        width: 100%;
+        height: 750px;
+        z-index: 100;
+
+        .talkCount {
+            margin-left: 20px;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        .inputBox {
+            width: 280px;
+            height: 200px;
+            position: relative;
+            margin-left: 20px;
+
+            .nameBox {
+                width: 70px;
+                height: 30px;
+                position: relative;
+                float: left;
+                padding: 3px 3px 3px 3px;
+                /*margin-top: 30px;*/
+            }
+
+            .starGrade {
+                width: 150px;
+                position: relative;
+                float: left;
+                padding-top: 5px;
+                /*margin-top: 30px;*/
+            }
+
+            .starGrade a {
+                color: gray;
+                font-size: 13px;
+            }
+
+            .starGrade a.on {
+                color: #ffce3b;
+            }
+
+            .submitBox {
+                width: 50px;
+                height: 30px;
+                position: relative;
+                border-radius: 3px;
+                line-height: 30px;
+                border: none;
+                margin-left: 0px;
+            }
+        }
+
+        .textArea {
+            width: 300px;
+            height: 100px;
+            padding: 5px 10px 5px 10px;
+            font-size: 15px;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
+        }
+
+        .cleanBot {
+            width: 300px;
+            height: 50px;
+            background-color: #dbdbdb;
+            border-radius: 10px;
+            margin-left: 20px;
+            font-size: 12px;
+            margin-top: 0px;
+        }
+
+        /*.modal {
+            display: none;
+            z-index: 1000000;
+            width: 70%;
+            height: 20%;
+        }
+
+        .modal-body {
+            font-size: 15px;
+        }
+
+        .btn-secondary {
+            background-color: #007BFF;
+        }*/
+
+        .chatWin {
+            width: 300px;
+            height: 300px;
+            overflow: auto;
+            margin-top: 20px;
+            margin-left: 20px;
+            padding-bottom: 20px;
+
+            li {
+                width: 280px;
+                height: 70px;
+                background-color: #F0F1F5;
+                margin-top: 15px;
+                border-radius: 10px;
+                list-style: none;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+            }
+
+            h5 {
+                padding: 10px;
+                font-size: 10px;
+            }
+
+            p {
+                font-size: 12px;
+                color: #222222;
+                padding-left: 10px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'Binggrae-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Binggrae-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.typographyBox{
+    position: absolute;
+    width:100%;
+    bottom:49vw;
+}
+.typographyBox p{
+    text-align: center;
+    font-family: 'Binggrae-Bold';
+    font-size:4vw;
+    color: white;
+    text-shadow: 2px 2px rgb(201, 201, 201);
+}

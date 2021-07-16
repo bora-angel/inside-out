@@ -1,0 +1,483 @@
+﻿@import 'cssStyle';
+
+body {
+    color: $blockC;
+    font-size: 18px;
+    font-family: $fontMain;
+    height: 100vh;
+
+    background: {
+        color: $backC;
+        image: url("../image/background7.jpg");
+        repeat: no-repeat;
+        size: cover;
+        position: 50% 50%;
+    }
+}
+.allAreaML {
+    width: 100%;
+    height: 1000px;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: rgba(1, 6, 28, 0.17);
+    overflow:hidden;
+    .backgroundAreaML {
+        width: 1400px;
+        height: 898.5074px;
+        position: relative;
+        margin: 70px;
+        z-index : 60;
+        //홈 아이콘
+        .homeIconArea {
+            
+            position: absolute;
+            left: -6rem;
+            top: 3%;
+            width: 8rem;
+            height: 3rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            display: flex;
+            flex-flow: row nowrap;
+            //아이콘
+            .homeIcon {
+                width: 4rem;
+                height: 3rem;
+                color: #efbe45;
+                position: absolute;
+                left:2rem;
+            }
+            //글자
+            .homeText {
+                width: 8rem;
+                height: 3rem;
+                font-size: 1.8rem;
+                font-family: $fontTitle;
+                color: $menuColor;
+                text-align: center;
+                line-height: 3rem;
+                transition: color,display 0.2s linear;
+                display: none;
+                text-shadow: 0px 0px 20px rgba(31, 31, 31, 0.58);
+                position: absolute;
+            }
+        }
+
+        .homeIconArea:hover {
+            .homeIcon{
+                color: #110060;
+            }
+
+            .homeText {
+                color: goldenrod;
+                display: block;
+            }
+        }
+        //밖같 폴더
+        .outBG {
+            width: 99.3985%;
+            height: 99.5487%;
+            position: absolute;
+        }
+        //속지
+        .inPager {
+            width: 95.4666%;
+            height: 88.3057%;
+            position: absolute;
+            left: 2.8959%;
+            top: 10.8295%;
+            background-color: $whiteC;
+
+            .contentsArea {
+                background-color: $whiteC;
+                box-sizing: border-box;
+                padding: 15px;
+                display: none;
+
+                .exitBtnArea {
+                    width: 100%;
+                    height: 30px;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: flex-end;
+
+                    .exitBtn {
+                        width: 30px;
+                        height: 30px;
+                        @include btnNone;
+                        transition: background-image, cursor 0.3s linear;
+
+                        background: {
+                            image: url("../image/manager_login_exitBtn.png");
+                            repeat: no-repeat;
+                            size: contain;
+                            color: $whiteC;
+                        }
+                    }
+
+                    .exitBtn:hover {
+                        background-image: url("../image/manager_login_exitRedBtn.png");
+                    }
+                }
+                //전화번호 목록
+                .allCheakArea {
+                    height: 2.777rem;
+                    padding: 0.1111%;
+                    font-size: 1rem;
+                    margin: 1.1111% 0%;
+                    box-sizing: border-box;
+                    //전화번호 한줄
+                    .numOneRow {
+                        height: 2.777rem;
+                        line-height: 100%;
+                    }
+                }
+                //전화번호 체크 박스
+                .userNumber {
+                    overflow: auto;
+                    height: 500px;
+                    font-size: 1rem;
+                    margin: 1.1111% auto;
+                    box-sizing: border-box;
+
+                    .numOneRow {
+                        height: 2.777rem;
+                        border-bottom: 1px solid $menuColor;
+                        line-height: 100%;
+
+                        .colRowML {
+                            height: 2.777rem;
+                            line-height: 2.777rem;
+                        }
+                    }
+                }
+                //문자 보내기
+                .row {
+                    //큰 제목
+                    .titleText {
+                        height: 2.777rem;
+                        line-height: 2.777rem;
+                        font-size: 1.2rem;
+                        margin: 20px 0px;
+                    }
+                    //텍스트 영역
+                    .textareaArea {
+                        height: 500px;
+                        width: 100%;
+                        //본문 입력 박스
+                        .textareaBox {
+                            resize: none;
+                            overflow: auto;
+                            width: 100%;
+                            height: 100%;
+                            line-height: 1.5em;
+                            font-size: 1rem;
+                        }
+                    }
+                    //버튼
+                    .btnArea {
+                        height: 4.4444rem;
+                        box-sizing: border-box;
+                        padding: 1.1112%;
+                        width: 100%;
+
+                        .btnSize {
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        //제목
+        .outTitle {
+            width: 14.6759%;
+            height: 9.5122%;
+            position: absolute;
+            left: 7.5740%;
+            top: 1%;
+            line-height: 4.7222rem;
+            color: $fontC2;
+
+            font: {
+                family: $fontTitle;
+                size: 3rem;
+            }
+        }
+        //열리는 영역
+        .openArea {
+            width: 98.4637%;
+            height: 95.8877%;
+            position: absolute;
+            left: 2.8959%;
+            top: 4.6643%;
+            transform-origin: bottom left;
+
+            .bGImage {
+                //안쪽 폴더
+                .inBG {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0px;
+                    right: 0px;
+
+                    background: {
+                        image: url("../image/manager_login_inBGIn.png");
+                        repeat: no-repeat;
+                        size: contain;
+                        position: 66% 61.45%;
+                    }
+                }
+            }
+
+            .inputArea {
+                width: 21rem;
+                height: 10.5rem;
+                position: absolute;
+                left: 5.13%;
+                top: 14.13%;
+
+                .contentsArea {
+                    width: 89.48%;
+                    height: 80.84%;
+                    position: absolute;
+                    left: 0%;
+                    top: 18.21%;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    align-items: center;
+                    display: flex;
+
+                    background: {
+                        image: url("../image/manager_login_input_area_box.png");
+                        repeat: no-repeat;
+                        size: contain;
+                    }
+
+                    .contentSortArea {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: center;
+                        align-items: center;
+
+                        .titleText {
+                            width: 80%;
+                            height: 1.2rem;
+                            color: $fontC2;
+                            font-size: 1.1rem;
+                            line-height: 1.2rem;
+                            font-weight: 700;
+                        }
+
+                        .typingArea {
+                            height: 1.7777rem;
+                            line-height: 1.7777rem;
+                            text-align: right;
+                            margin: 20px 0px;
+
+                            .typingNum {
+                                border: none;
+                                outline: none;
+                                display: inline;
+                                width: 30px;
+                            }
+                        }
+
+                        .inputBoxArea {
+                            width: 80%;
+                            height: 24.6975%;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+
+                            .inputOut {
+                                width: 69.00%;
+                                height: 100%;
+                                text-align: center;
+
+                                background: {
+                                    image: url("../image/manager_login_input.png");
+                                    repeat: no-repeat;
+                                    size: contain;
+                                    position: 50% 50%;
+                                }
+
+
+
+                                .inputIn {
+                                    width: 80%;
+                                    height: 80%;
+                                    line-height: 1rem;
+                                    @include btnNone;
+                                    background-color: rgba(0,0,0,0);
+                                    border: none;
+                                    outline: none;
+                                    color: $blockC;
+                                    font-family: $fontTitle;
+                                }
+                            }
+
+                            .buttonStyle {
+                                width: 26.07%;
+                                height: 100%;
+                                display: block;
+                                @include btnNone;
+                                text-align: center;
+                                color: $fontC2;
+
+                                background: {
+                                    image: url("../image/manager_login_btn.png");
+                                    repeat: no-repeat;
+                                    size: contain;
+                                    color: rgba(0,0,0,0);
+                                    position: 50% 50%;
+                                }
+                            }
+                        }
+
+                        .passwordText {
+                            width: 80%;
+                            height: 1.0rem;
+                            line-height: 1.0rem;
+                            font-size: 0.5rem;
+                            color: $fontC2;
+                            box-sizing: border-box;
+                            padding-left: 20px;
+                        }
+                    }
+                }
+
+
+                .gearArea {
+                    width: 28%;
+                    height: 38.97%;
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+
+                    .bigGear {
+                        position: absolute;
+                        width: 89.05%;
+                        height: 100%;
+                        left: 0px;
+                        top: 0px;
+                    }
+
+                    .smallGear {
+                        width: 56.20%;
+                        height: 62.70%;
+                        position: absolute;
+                        right: 0px;
+                        bottom: 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+    @media all and (max-width: 1550px) {
+        body {
+            color: $blockC;
+            background-color: $backC;
+            font-size: 18px;
+            font-family: $fontMain;
+            width: 100%;
+
+            background: {
+                color: $backC;
+                image: url("../image/background7.jpg");
+                repeat: no-repeat;
+                size: cover;
+                position: 50% 50%;
+            }
+        }
+
+        .allAreaML {
+            width: 100%;
+            height: auto;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            .homeIconArea {
+                left: 80%;
+            }
+
+            .backgroundAreaML {
+                width: 1400px;
+                height: 898.5074px;
+                position: relative;
+
+                .outTitle {
+                    width: 14.6759%;
+                    height: 9.5122%;
+                    position: absolute;
+                    left: 7.5740%;
+                    top: 0.82%;
+                    line-height: 4.7222rem;
+                    color: $fontC2;
+
+                    font: {
+                        family: $fontTitle;
+                        size: 3rem;
+                    }
+                }
+            }
+        }
+        }
+
+    @media all and (max-width: 576px) {
+        body {
+            color: $blockC;
+            background-color: $backC;
+            font-size: 10px;
+            font-family: $fontMain;
+            width: 100%;
+            height: 100vh;
+
+            background: {
+                color: $backC;
+                image: url("../image/background7.jpg");
+                repeat: no-repeat;
+                size: cover;
+                position: 50% 50%;
+            }
+        }
+
+        .allAreaML {
+            width: 100%;
+            height: auto;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            .backgroundAreaML {
+                width: 400px;
+                height: 256.7164px;
+
+                .outTitle {
+                    width: 14.6759%;
+                    height: 9.5122%;
+                    position: absolute;
+                    left: 7.5740%;
+                    top: 0.82%;
+                    line-height: 3rem;
+                    color: $fontC2;
+
+                    font: {
+                        family: $fontTitle;
+                        size: 2rem;
+                    }
+                }
+            }
+        }
+    }

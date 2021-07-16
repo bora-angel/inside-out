@@ -1,0 +1,100 @@
+    <!--이벤트디자인-->
+    <link rel="stylesheet" href="../css/main_eventPage.css" type="text/css">
+    <!--이벤트자바스크립트 정규식-->
+    <script src="../js/mainInput.js"></script>
+    <!--이벤트 페이지-->
+<div class="eventBackground" id="eventPage">
+    <img class="eventImg" src="../image/eventPage03.jpg" alt="이벤트시사회페이지">
+    <img class="eventMobileImg" src="../image/eventMobile.jpg" alt="모바일용 이벤트시사회페이지">
+
+    <div class="eventTopBox">
+    <div class="container eventInputBox" name="input">
+        <div class="row">
+          <div class="col align-self-center  mt-4 resizeTop">
+            <h1 class="text-center eventTitle mt-4"><b class="eventBlod">Inside Out</b> 시사회 이벤트!</h1>
+            <div class="row addTag">
+                <div class="mainContent col-md-10 offset-md-2 mt-2">
+                    <p>- 성명과 휴대폰 번호를 정확히 입력해주세요.</p>
+                  </div>
+            </div>
+            <form>
+            <div class="row mb-4">
+                <div class="col-md-6 offset-md-2">
+                    <input type="text" class="form-control  userInput"  id="userName" placeholder="Name" name="userName">
+                  </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 offset-md-2 mt-2 resizeDiv">
+                <input type="text" class="form-control  userInput" id="userPhone"  placeholder="Phone-Number" name="userPhoneNumber">
+              </div>
+              <div class="col col-md-4 mt-2 resizeDiv">
+                <button type="submit" class="btn btn-primary submitBtn" onClick="formCheck();">제출</button>
+              </div>
+            </div>
+        </form>
+            <div class="row" >
+                <div class="col col-md col-sm-12 offset-md-2 mt-4 resizeBottom">
+                    <input class="form-check-input checkInput" type="checkbox" id="gridCheck">
+                <label class="form-check-label userTxt" for="gridCheck">
+                    &nbsp;개인정보 동의 ( 포트폴리오 용도로 실제 개인정보가 이용 및 사용되지 않습니다. )
+                </label>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <P class="col-md-8 offset-md-2 mt-4 mb-4 eventTxt">* 당첨자에 한하여 시사회 티켓이 문자로 발송됩니다.<br>정확한 정보를 기입하지 않는 경우 당첨자에서 제외됨을 알려드립니다.</P>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+<script>
+    //모바일 화면 크기에 맞추기 위한 코드 -보라-
+    //모바일 적용 함수
+    function smallEventScreen(){
+      $(".resizeDiv").removeClass('mt-2');
+      $(".resizeDiv").addClass('mt-1');
+
+      $(".resizeBottom").removeClass('mt-4');
+      $(".resizeBottom").addClass('mt-0');
+
+
+      $(".resizeTop").removeClass('mt-4');
+      $(".resizeTop").addClass('mt-2');
+
+      $(".eventTxt").removeClass('mb-4','mt-2');
+      $(".eventTxt").addClass('mb-1','mt-1');
+      $(".eventTitle").addClass("titleBlock")
+    }
+    //pc 적용 함수
+    function LargeEventScreen(){
+      $(".resizeDiv").removeClass('mt-1');
+      $(".resizeDiv").addClass('mt-2');
+
+      $(".resizeBottom").removeClass('mt-0');
+      $(".resizeBottom").addClass('mt-4');
+
+      $(".resizeTop").removeClass('mt-2');
+      $(".resizeTop").addClass('mt-4');
+
+      $(".eventTxt").removeClass('mb-1','mt-1');
+      $(".eventTxt").addClass('mb-4','mt-2');
+    }
+        $(window).on('load',()=>{
+            if(window.innerWidth<576){
+              smallEventScreen();
+            }else{
+              LargeEventScreen();
+            }
+        });
+        
+        $(window).resize(function(){
+          let detachTitle = '';
+            if(window.innerWidth<576){
+              smallEventScreen();
+            }else{
+              LargeEventScreen();
+              $(".eventTitle").removeClass("titleBlock");
+            }
+        });
+</script>

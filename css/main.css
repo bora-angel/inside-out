@@ -1,0 +1,148 @@
+@charset "UTF-8";
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'NanumSquare'; }
+
+/*영어 폰트*/
+@font-face {
+  font-family: 'Intensa Fuente Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Intensa Fuente Regular"), url("../font/Intensa Fuente.woff") format("woff"); }
+.nanumsquare {
+  font-family: 'NanumSquare', sans-serif !important; }
+
+/*스크롤 부드럽게 만들기*/
+html {
+  scroll-behavior: smooth; }
+
+body {
+  background: #111; }
+
+.aTmpId {
+  position: relative;
+  top: 0; }
+
+/*PC버전 상단 영역*/
+.bg-custom {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 0;
+  z-index: 99999999999; }
+  .bg-custom .topLogo {
+    width: 170px; }
+  .bg-custom .mainMenu1, .bg-custom .mainMenu2, .bg-custom .mainMenu3, .bg-custom .mainMenu4, .bg-custom .mainMenu5 {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.75); }
+  .bg-custom .mainMenu1:hover {
+    border-bottom: 3px solid #FFEA98; }
+  .bg-custom .mainMenu2:hover {
+    border-bottom: 3px solid #FF9B9B; }
+  .bg-custom .mainMenu3:hover {
+    border-bottom: 3px solid #A4C9FF; }
+  .bg-custom .mainMenu4:hover {
+    border-bottom: 3px solid #C5F179; }
+  .bg-custom .mainMenu5:hover {
+    border-bottom: 3px solid #DDB3F8; }
+  .bg-custom .navSize {
+    font-size: 22px;
+    padding: 0; }
+
+/*비디오 영역*/
+.videoBox {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  background: #111111; }
+  .videoBox video {
+    width: auto;
+    height: 100%; }
+
+/*Footer영역*/
+.footerArea {
+  width: 100%;
+  height: 150px;
+  position: relative;
+  bottom: 0;
+  background-color: #09002f;
+  padding: 0; }
+  .footerArea .footerPattern {
+    background-image: url("../image/footerPattern3.png");
+    width: 100%;
+    height: 100% !important;
+    background-size: cover; }
+    .footerArea .footerPattern .footerRow {
+      margin: 0; }
+      .footerArea .footerPattern .footerRow .footerTitle {
+        color: #F9C441;
+        font-size: 25px; }
+      .footerArea .footerPattern .footerRow .footerContent {
+        color: #fcfbfa;
+        font-size: 18px; }
+
+.portModal {
+  position: fixed;
+  width: 451px;
+  height: 478px;
+  top: 50%;
+  left: 50%;
+  margin-top: -239px;
+  margin-left: -225.5px;
+  display: block;
+  z-index: 10000000; }
+  .portModal .closeButton {
+    color: #222;
+    position: absolute;
+    right: 23%;
+    top: 11%;
+    font-size: 20px;
+    z-index: 9999999;
+    cursor: pointer; }
+    .portModal .closeButton:hover {
+      color: #fcfbfa;
+      transition: 0.2s; }
+
+/*모바일 버전 CSS*/
+@media only screen and (min-width: 375px) and (max-width: 576px) {
+  /*모바일버전 메뉴 감싸는 큰 박스*/
+  .menuBox {
+    border-top: 1px solid rgba(255, 255, 255, 0.4);
+    margin-top: 5px;
+    /*모바일버전 메뉴 감싸는 작은 박스*/ }
+    .menuBox .mobileMenuSize {
+      height: 390px;
+      /*모바일버전 각 메뉴 공통 적용*/ }
+      .menuBox .mobileMenuSize .navSize {
+        background-color: #00013A;
+        text-align: center;
+        border: none;
+        line-height: 43px;
+        box-sizing: border-box;
+        border-bottom: 3px solid #00013A; }
+
+  /*모바일 동영상 박스*/
+  .videoBox {
+    width: 100%;
+    height: 324px;
+    overflow: hidden;
+    margin: 0px auto;
+    position: relative; }
+    .videoBox video {
+      width: 100%;
+      height: auto; }
+
+  /*모바일 footer영역*/
+  .footerArea {
+    position: relative;
+    margin-top: 1400px; }
+    .footerArea .footerPattern .footerTitle {
+      color: #F9C441;
+      font-size: 22px; }
+    .footerArea .footerPattern .footerContent {
+      color: #fcfbfa;
+      font-size: 16px;
+      margin: 0; } }
+
+/*# sourceMappingURL=main.css.map */

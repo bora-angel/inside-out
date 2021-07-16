@@ -1,0 +1,86 @@
+body {
+  color: #333333;
+  background-color: #fcfbfa;
+  font-size: 18px;
+  font-family: "NanumSquare", sans-serif; }
+
+.allArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; }
+  .allArea .centerArea {
+    height: 100%;
+    width: 100%; }
+    .allArea .centerArea .allCheakArea {
+      height: 5.5555%;
+      padding: 0.1111%;
+      font-size: 22p;
+      margin: 1.1111% 0%;
+      box-sizing: border-box; }
+      .allArea .centerArea .allCheakArea .numOneRow {
+        height: 100%;
+        line-height: 100%; }
+    .allArea .centerArea .userNumber {
+      overflow: auto;
+      height: 16.4444%;
+      font-size: 18px;
+      margin: 1.1111% auto;
+      box-sizing: border-box; }
+      .allArea .centerArea .userNumber .numOneRow {
+        height: 100%;
+        border-bottom: 1px solid #110060;
+        line-height: 100%; }
+        .allArea .centerArea .userNumber .numOneRow .cheakNum {
+          text-align: center; }
+    .allArea .centerArea .row .titleText {
+      height: 5.5555%;
+      line-height: 5.5555%;
+      font-size: 30px;
+      margin: 20px 0px; }
+    .allArea .centerArea .row .textareaArea {
+      height: 55.5555%; }
+      .allArea .centerArea .row .textareaArea .textareaBox {
+        resize: none;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        line-height: 1.5em;
+        font-size: 18px; }
+    .allArea .centerArea .row .noticeTitle {
+      height: 8.8889%;
+      line-height: 8.8889%;
+      font-size: 22p;
+      margin-top: 0.5556%;
+      margin-bottom: 1.1111%; }
+    .allArea .centerArea .row .noticeTitleText {
+      height: 8.8889%;
+      line-height: 5.5556%;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      margin-top: 0.5556%;
+      margin-bottom: 1.1111%; }
+      .allArea .centerArea .row .noticeTitleText .noticeTextArea {
+        height: 5.5556%;
+        margin: 0.5556% 0px;
+        width: 100%; }
+        .allArea .centerArea .row .noticeTitleText .noticeTextArea .noticeText {
+          width: 100%;
+          height: 100%;
+          resize: none;
+          font-size: 22p; }
+    .allArea .centerArea .row .btnArea {
+      height: 8.8889%;
+      box-sizing: border-box;
+      padding: 1.1112%; }
+      .allArea .centerArea .row .btnArea .btnSize {
+        width: 100%;
+        height: 100%; }
+
+.allAreaEvent {
+  height: 100%; }
+  .allAreaEvent .centerAreaEvent {
+    height: 100%; }
+
+/*# sourceMappingURL=master.css.map */

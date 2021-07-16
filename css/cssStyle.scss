@@ -1,0 +1,34 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+//제목 폰트
+@font-face {
+    font-family: 'Intensa Fuente Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Intensa Fuente Regular'), url('../font/Intensa Fuente.woff') format('woff');
+}
+
+//색
+$whiteC: #fcfbfa;
+$blockC: #333333;
+$menuColor: #110060;
+$numBack: #f8ebdf;
+$fontC2: #b0c3ff;
+$backC: #111;
+//글씨체
+$fontTitle: 'Intensa Fuente Regular';
+$fontMain: 'NanumSquare', sans-serif;
+
+//글자 크기
+$font1Size: 1.2rem;
+$font2Size: 1.2rem;
+$font3Size: 18px;
+
+
+@mixin btnNone {
+    outline: none;
+    border: none;
+}
